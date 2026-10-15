@@ -1,0 +1,355 @@
+
+/* CONFIGURACION GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.375), rgba(0, 0, 0, 0.375)),  url(IMG/FONDO.png);
+    background-repeat: no-repeat;
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     min-height: 100vh;
+    margin: 0;
+  
+}
+/* LOGO */
+#Logo{
+    align-items: center;    
+    padding: 30px;
+    justify-content: center;
+    display: flex;
+    
+}
+.LogoContenedor{
+  display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-direction: row;
+    background-color: #29252549;
+    border-radius: 50px;
+    padding-right: 15px;
+}
+
+.LogoIMG{
+    width: 150px;
+    height: auto;
+    padding-bottom: 15px;
+}
+.LogoTexto{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f6f6ea;
+    
+}
+/* CONTENEDOR DE LA BARRA */
+.BarraBusqueda {
+    padding: 10px;
+    padding-top: 150px;
+    
+ 
+}
+
+
+
+/* CAJA DEL MENU */
+
+.menu {
+    background-color: #e5e5e0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    height: 60vh;
+    
+}
+
+/* TITULO CATEGORIAS */
+.menu h3 {
+    color: #0e1c12;
+    font-family: Impact, Haettenschweiler, sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* ELEMENTOS DE LA LISTA */
+.menu .list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background-color: #79838c;
+    color: #bfc2bb;
+
+    border: none;
+    padding: 14px 18px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.categoria-link {
+    display: flex;           /* Ocupa todo el ancho disponible */
+    align-items: center;     /* Centra verticalmente */
+    gap: 10px;               /* Separa el icono del texto */
+    padding: 12px 16px;      /* Define el tamaño del botón */
+    width: 100%;
+    text-decoration: none;   /* Quita el subrayado */
+    color: #333;             /* Color del texto */
+}
+
+/* ICONOS DE FONT AWESOME */
+.menu .list-group-item i {
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+    padding: 0;
+    
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.menu .list-group-item:hover {
+    background-color: #bfc2bb;
+    color: #0e1c12;
+    padding-left: 25px;
+}
+
+/* BOTON DE CATEGORIAS PARA CELULARES */
+.btn-categorias {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    background-color: #79838c;
+    color: #ffffff;
+
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bold;
+    text-align: left;
+}
+
+/* CONTENIDO DEL BOTON */
+.btn-categorias span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* EFECTO DEL BOTON */
+.btn-categorias:hover,
+.btn-categorias:focus {
+    background-color: #0e1c12;
+    color: #ffffff;
+}
+
+/* FLECHA DEL DESPLEGABLE */
+.btn-categorias .flecha {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* GIRAR LA FLECHA CUANDO EL MENU ESTA ABIERTO */
+.btn-categorias[aria-expanded="true"] .flecha {
+    transform: rotate(180deg);
+}
+
+/* AJUSTES PARA CELULARES */
+@media (max-width: 767.98px) {
+
+    .menu {
+        margin-top: 8px;
+        padding: 10px;
+    }
+
+    .menu .list-group-item {
+        padding: 12px 15px;
+    }
+
+    .menu .list-group-item:hover {
+        padding-left: 20px;
+    }
+
+}
+h3{
+    align-items: center;
+}
+
+
+/* CAROUSEL */
+
+
+/* CONTENEDOR DEL CAROUSEL */
+.carousel{
+    width: min(100%, 80vh);         /* Más grande: ocupa todo el ancho disponible, pero nunca más alto que el 80% de la pantalla */
+    aspect-ratio: 1 / 1;            /* Sigue siendo cuadrado */
+    margin: 70px;                 /* Centrado en su columna */
+    background-color: transparent;  /* Sin color de fondo propio, para que se vea tu imagen de fondo de la página (Fondo.png) */
+    border: 3px solid #e5e5e0;      /* Borde claro */
+    border-radius: 12px;            /* Esquinas redondeadas */
+    
+}
+
+/* HACE QUE LAS DIAPOSITIVAS OCUPEN TODO EL CUADRADO */
+.carousel .carousel-inner,
+.carousel .carousel-item {
+    height: 100%;                   /* Alto completo del contenedor cuadrado, así las imágenes no se achican ni agrandan la página */
+}
+
+/* IMÁGENES */
+.carousel-img {
+    display: block;                 /* Quita el espacio vacío que deja una imagen por defecto debajo */
+    width: 100%;                    /* La imagen ocupa todo el ancho del cuadrado */
+    height: 100%;                   /* La imagen ocupa todo el alto del cuadrado */
+    object-fit: cover;              /* Llena el cuadrado sin deformar la foto; recorta lo que sobre */
+    object-position: center;        /* El recorte se hace desde el centro, para que la prenda quede en el medio */
+}
+
+/* ZONA CLICKEABLE DE LAS FLECHAS */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 14%;                     /* Qué tan ancha es el área donde se hace clic para pasar de imagen */
+}
+
+/* ICONO DE LAS FLECHAS */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(14, 28, 18, 0.55);  /* Círculo verde oscuro semitransparente detrás de la flecha, para que se vea sobre cualquier foto */
+    border-radius: 50%;             /* Convierte el fondo en un círculo */
+    padding: 18px;                  /* Agranda el círculo */
+    background-size: 50%;           /* Achica la flecha dentro del círculo */
+}
+
+
+
+/* FOOTER MAKE ART CLOTHES */
+.mac-footer {
+    width: 100%;
+    margin-top: 60px;
+    padding: 35px 0 0;
+    background-color: #0e1c12;
+    color: #bfc2bb;
+    border-top: 3px solid #79838c;
+    box-sizing: border-box;
+}
+
+.mac-footer * {
+    box-sizing: border-box;
+}
+
+.mac-footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.mac-footer-marca h2 {
+    margin: 0 0 10px;
+    font-family: Impact, Haettenschweiler, sans-serif;
+    font-size: 28px;
+    color: #bfc2bb;
+    letter-spacing: 1px;
+}
+
+.mac-footer-marca h2 span {
+    color: #79838c;
+}
+
+.mac-footer-marca p {
+    margin: 0;
+    font-size: 14px;
+    color: #bfc2bb;
+}
+
+.mac-footer-redes {
+    text-align: right;
+}
+
+.mac-footer-redes h3 {
+    margin: 0 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #bfc2bb;
+}
+
+.mac-footer-iconos {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.mac-footer-iconos a {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #79838c;
+    border-radius: 50%;
+    color: #bfc2bb;
+    font-size: 19px;
+    text-decoration: none;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.mac-footer-iconos a:hover {
+    background-color: #79838c;
+    color: #ffffff;
+}
+
+.mac-footer-final {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 0;
+    border-top: 1px solid #344238;
+}
+
+.mac-footer-final p {
+    margin: 0;
+    font-size: 12px;
+    color: #bfc2bb;
+}
+
+/* VERSION CELULAR */
+@media (max-width: 767px) {
+    .mac-footer {
+        margin-top: 35px;
+        padding-top: 28px;
+    }
+
+    .mac-footer-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .mac-footer-marca h2 {
+        font-size: 25px;
+    }
+
+    .mac-footer-redes {
+        text-align: left;
+    }
+
+    .mac-footer-iconos {
+        justify-content: flex-start;
+    }
+
+    .mac-footer-final {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* REFERENCIALES */
+a{
+    text-decoration: none;
+    color: inherit;
+}
