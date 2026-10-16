@@ -185,7 +185,7 @@ h3{
 .carousel{
     width: min(100%, 80vh);         /* Más grande: ocupa todo el ancho disponible, pero nunca más alto que el 80% de la pantalla */
     aspect-ratio: 1 / 1;            /* Sigue siendo cuadrado */
-    margin: 70px;                 /* Centrado en su columna */
+    margin: 70px auto;                 /* Centrado en su columna */
     background-color: transparent;  /* Sin color de fondo propio, para que se vea tu imagen de fondo de la página (Fondo.png) */
     border: 3px solid #e5e5e0;      /* Borde claro */
     border-radius: 12px;            /* Esquinas redondeadas */
